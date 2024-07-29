@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Newspaper</title>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.0/css/bulma.min.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link
+            href="https://fonts.googleapis.com/css2?family=Noticia+Text:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+            rel="stylesheet">
+        <style>
+            .noticia-text-regular {
+                font-family: "Noticia Text", serif;
+                font-weight: 400;
+                font-style: normal;
+            }
+
+            .noticia-text-bold {
+                font-family: "Noticia Text", serif;
+                font-weight: 700;
+                font-style: normal;
+                font-size: 4rem;
+            }
+
+            .noticia-text-regular-italic {
+                font-family: "Noticia Text", serif;
+                font-weight: 400;
+                font-style: italic;
+            }
+
+            .noticia-text-bold-italic {
+                font-family: "Noticia Text", serif;
+                font-weight: 700;
+                font-style: italic;
+            }
+
+            hr.top {
+                border-top: 2px solid #bbb;
+            }
+
+            h1.title {
+                text-transform: uppercase;
+            }
+
+            .fancy-text {
+                font-size: small;
+                font-family: "Noticia Text", serif;
+                text-transform: uppercase;
+            }
+
+            img {
+                float: left;
+                margin: 15px;
+            }
+
+            p.subtitle {
+                text-align: justify;
+                padding-top: 15px;
+            }
+        </style>
+    </head>
+
+    <body>
+        <section class="section">
+            <div class="container">
+                <h1 class="title noticia-text-bold has-text-centered">
+                    {{ title }}
+                </h1>
+                <hr class="top" />
+                <p class="fancy-text has-text-centered">Issue #19 ・ By Central AI ・ {{ dtformat }} </p>
+                <hr class="top" />
+                    <img src="https://bulma.io/assets/images/placeholders/256x256.png" align="right" />
+                <p class="subtitle">
+                    {{ subtitle}}
+                </p>
+            </div>
+        </section>
+    </body>
+
+</html>
